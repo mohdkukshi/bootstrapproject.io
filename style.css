@@ -2,18 +2,27 @@
     border: 3px black;
     color: white;
     padding-left: 350px;
-    padding-top: 75px;
+    padding-top: 175px;
+    text-align: left;
+    font-weight: 200;
 }
 
 body {
-    background-image: url('cool-background.png');
+    background-image: url('/home/mohd-admin/Documents/Projetcs/Temperature Converter/cool-background.png');
 }
 
 .footer {
     color: white;
-    padding-top: 300px;
-    padding-left: 400px;
+    padding-top: 300px; /* Add padding for all sides, adjust as needed */
+    text-align: center; /* Center-align the content */
     font-weight: 200;
+}
+
+/* Media query for screens smaller than 768px (typical for mobile) */
+@media (max-width: 768px) {
+    .footer, #header {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 }
 .col-md-6 {
     color: orange;
