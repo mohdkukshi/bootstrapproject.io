@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temp Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="/home/mohd-admin/Documents/Projetcs/Temperature Converter/tempicon50.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class=".col" id="header">
+                <h1> Welcome to Temperature Converter </h1>
+            </div>
+       
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fahrenheitInput">Input Fahrenheit</label>
+                            <input type="text" class="form-control" id="fahrenheitInput" placeholder="Enter Fahrenheit">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="celsiusOutput">Output Celsius</label>
+                            <input type="text" class="form-control" id="celsiusOutput" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // JavaScript code for temperature conversion
+                document.getElementById('fahrenheitInput').addEventListener('input', function() {
+                    // Get the input value in Fahrenheit
+                    const fahrenheitValue = parseFloat(this.value);
+        
+                    if (!isNaN(fahrenheitValue)) {
+                        // Convert Fahrenheit to Celsius
+                        const celsiusValue = (fahrenheitValue - 32) * (5 / 9);
+                        // Update the Celsius output field
+                        document.getElementById('celsiusOutput').value = celsiusValue.toFixed(2);
+                    } else {
+                        // If input is not a valid number, clear the output field
+                        document.getElementById('celsiusOutput').value = '';
+                    }
+                });
+            </script>
+
+    <div class="footer">
+        <div class="row" id="footer">
+            <h3> @Copyright by Mohd Kukshiwala, 25th Oct 2023 </h3>
+        </div>
+    </div>
+</body>
+</html>
+ 
