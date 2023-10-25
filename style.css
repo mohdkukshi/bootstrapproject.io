@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('cool-background.png');
+    background-image: url('/cool-background.png');
 }
 
 .footer {
